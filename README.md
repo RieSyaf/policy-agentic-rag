@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 3. Install and Start Ollama
-Ensure you have Ollama installed and running locally, then pull the required model:
+* Ensure you have Ollama installed and running locally, then pull the required model:
 
 ```bash
 ollama run llama3.1
@@ -47,20 +47,20 @@ ollama run llama3.1
 
 ## ⚙️ Running the Pipeline
 Step 1: Ingest the Data
-Extracts text from the PDFs in the data/ folder and creates structured JSON chunks.
+* Extracts text from the PDFs in the data/ folder and creates structured JSON chunks.
 
 ```bash
 python src/ingestion.py
 ```
 
 Step 2: Index the Vector Database
-Embeds the chunks and stores them in local ChromaDB collections.
+* Embeds the chunks and stores them in local ChromaDB collections.
 
 ```bash
 python src/indexing.py
 ```
 Step 3: Launch the User Interface
-Starts the interactive Agentic RAG chat application.
+* Starts the interactive Agentic RAG chat application.
 
 ```bash
 streamlit run app.py
@@ -69,9 +69,7 @@ streamlit run app.py
 ## 🧪 Quality Assurance & Testing
 This system was rigorously tested against common local LLM failure modes:
 
-Semantic Routing Tests: Verified that broad questions correctly map to general knowledge tools without explicit keyword triggers.
-
-Context Bleed Tests: Verified that consecutive, unrelated queries do not pollute the retrieval vector space (solved via transactional memory wiping).
-
-Negative Restraint Tests: Verified that out-of-scope queries (e.g., "Does this cover alien invasions?") result in a firm, accurately cited rejection rather than a hallucinated policy clause.
+* Semantic Routing Tests: Verified that broad questions correctly map to general knowledge tools without explicit keyword triggers.
+* Context Bleed Tests: Verified that consecutive, unrelated queries do not pollute the retrieval vector space (solved via transactional memory wiping).
+* Negative Restraint Tests: Verified that out-of-scope queries (e.g., "Does this cover alien invasions?") result in a firm, accurately cited rejection rather than a hallucinated policy clause.
 
