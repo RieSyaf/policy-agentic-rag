@@ -1,0 +1,13 @@
+# Environments
+venv/
+env/
+__pycache__/
+
+# Generated Data & Databases
+chroma_db_data/
+qbe_chunks.json
+general_chunks.json
+
+# OS Files
+.DS_Store
+Thumbs.db

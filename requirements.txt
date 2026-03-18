@@ -1,0 +1,10 @@
+chromadb
+sentence-transformers
+pymupdf
+tqdm
+ollama
+langchain 
+langchain-ollama 
+langgraph
+langchain-text-splitters
+streamlit
